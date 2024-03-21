@@ -1,38 +1,102 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+h1 {
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-label {
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
 }
 
-@keyframes App-logo-spin {
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.alert {
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.card {
+  width: 18rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease forwards;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
   }
 }
